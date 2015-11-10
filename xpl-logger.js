@@ -74,13 +74,21 @@ xpl.bind(function(error) {
 
     console.log(msg);
 
+    if (commander.head) {
+      console.log('{');
+      for ( var n in message.header) {
+        var v = message.header[n];
+        console.log("  " + n + "=" + v);
+      }
+      console.log('}');
+    }
+
     if (commander.body && order) {
       console.log('{');
       for (var i = 0; i < order.length; i++) {
-        console.log("  " + message.body[order[i]]);
+        console.log("  " + order[i] + "=" + message.body[order[i]]);
       }
       console.log('}');
-
     }
   });
 });
