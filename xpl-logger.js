@@ -1,6 +1,8 @@
 var Xpl = require("xpl-api");
 var commander = require('commander');
 var os = require('os');
+var DateFormat = require('dateformat');
+var debug = require('debug')('xpl-logger');
 
 commander.version(require("./package.json").version);
 commander.option("--head", "Describe header");
@@ -45,29 +47,28 @@ xpl.bind(function(error) {
   }
 
   console.log("Xpl bind succeed ");
-});
 
-xpl.on("message", function(message, address, packet) {
-  var msg = DateFormat(dateFormat, new Date());
+  xpl.on("message", function(message, address, packet) {
+    var msg = DateFormat(dateFormat, new Date());
 
-  msg += " [" + +"/" + message.bodyName + ": " + message.head.source + " -> " +
-      message.head.target;
+    msg += " [" + +"/" + message.bodyName + ": " + message.head.source +
+        " -> " + message.head.target;
 
-  var order = message.body.$order;
-  if (order) {
-    msg += " ";
-    for (var i = 0; i < order.length; i++) {
-      if (i) {
-        msg += "/";
+    var order = message.body.$order;
+    if (order) {
+      msg += " ";
+      for (var i = 0; i < order.length; i++) {
+        if (i) {
+          msg += "/";
+        }
+
+        msg += message.body[order[i]];
       }
-
-      msg += message.body[order[i]];
     }
-  }
 
-  console.log(msg);
+    console.log(msg);
+  });
 });
-
 if (commander.headDump) {
   var heapdump = require("heapdump");
   console.log("***** HEAPDUMP enabled **************");
