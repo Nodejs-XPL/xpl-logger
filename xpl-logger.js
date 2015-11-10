@@ -73,6 +73,15 @@ xpl.bind(function(error) {
     msg += "]";
 
     console.log(msg);
+
+    if (commander.body && order) {
+      console.log('{');
+      for (var i = 0; i < order.length; i++) {
+        console.log("  " + message.body[order[i]]);
+      }
+      console.log('}');
+
+    }
   });
 });
 if (commander.headDump) {
