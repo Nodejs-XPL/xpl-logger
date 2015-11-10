@@ -1,0 +1,24 @@
+{
+  "name": "xpl-tools",
+  "version": "1.0.0",
+  "description": "XPL logger",
+  "bin": {
+  	"xpl-milight": "./bin/xpl-logger"
+  },
+  "dependencies": {
+	  "xpl-api": "~1.2",
+	  "commander": "~2.3",
+	  "dateformat": "latest"
+  },
+  "keywords": [
+    "XPL"
+  ],
+  "files": [
+    "xpl-logger.js",
+    "bin/xpl-logger"
+	],
+  "repository": { "type": "git", "url": "https://github.com/Nodejs-XPL/xpl-tools.git" },
+  "author": "Olivier Oeuillot",
+  "license": "GPL",
+  "readmeFilename": "README.md"
+}
