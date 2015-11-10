@@ -51,8 +51,8 @@ xpl.bind(function(error) {
   xpl.on("message", function(message, address, packet) {
     var msg = DateFormat(new Date(), dateFormat);
 
-    msg += " [" + +"/" + message.bodyName + ": " + message.head.source +
-        " -> " + message.head.target;
+    msg += " [" + message.headerName + "/" + message.bodyName + ": " +
+        message.header.source + " -> " + message.header.target;
 
     var order = message.body.$order;
     if (order) {
