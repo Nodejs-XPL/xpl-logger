@@ -75,7 +75,7 @@ xpl.bind(function(error) {
     console.log(msg);
 
     if (commander.head) {
-      console.log(command.headerName + ' {');
+      console.log(commander.headerName + ' {');
       for ( var n in message.header) {
         var v = message.header[n];
         console.log("  " + n + "=" + v);
@@ -84,7 +84,7 @@ xpl.bind(function(error) {
     }
 
     if (commander.body && order) {
-      console.log(command.bodyName + ' {');
+      console.log(commander.bodyName + ' {');
       for (var i = 0; i < order.length; i++) {
         console.log("  " + order[i] + "=" + message.body[order[i]]);
       }
