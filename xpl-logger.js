@@ -55,7 +55,7 @@ xpl.bind(function(error) {
     msg += " [" + message.headerName + "/" + message.bodyName + ": " +
         message.header.source + " -> " + message.header.target;
 
-    var order = message.body.$order;
+    var order = message.$order;
     if (order) {
       msg += " ";
       for (var i = 0; i < order.length; i++) {
@@ -66,6 +66,8 @@ xpl.bind(function(error) {
         msg += message.body[order[i]];
       }
     }
+
+    msg += "]";
 
     console.log(msg);
   });
