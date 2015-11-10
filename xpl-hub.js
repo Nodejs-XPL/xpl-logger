@@ -10,7 +10,7 @@ Xpl.fillCommander(commander);
 
 commander.parse(process.argv);
 
-configuration.hubSupport = true;
+commander.hubSupport = true;
 
 var xpl = new Xpl(commander);
 
