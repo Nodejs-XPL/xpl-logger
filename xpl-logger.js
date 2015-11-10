@@ -49,7 +49,7 @@ xpl.bind(function(error) {
   console.log("Xpl bind succeed ");
 
   xpl.on("message", function(message, address, packet) {
-    var msg = DateFormat(dateFormat, new Date());
+    var msg = DateFormat(new Date(), dateFormat);
 
     msg += " [" + +"/" + message.bodyName + ": " + message.head.source +
         " -> " + message.head.target;

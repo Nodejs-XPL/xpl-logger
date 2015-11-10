@@ -8,7 +8,8 @@
   "dependencies": {
 	  "xpl-api": "~1.2",
 	  "commander": "~2.3",
-	  "dateformat": "latest"
+	  "dateformat": "latest",
+	  "debug": "latest"
   },
   "keywords": [
     "XPL"
