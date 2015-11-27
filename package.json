@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "XPL logger",
   "bin": {
-  	"xpl-milight": "./bin/xpl-logger"
+  	"xpl-logger": "./bin/xpl-logger",
+    "xpl-hub": "./bin/xpl-hub"
   },
   "dependencies": {
 	  "xpl-api": "~1.2",
 	  "commander": "~2.3",
-	  "dateformat": "latest",
-	  "debug": "latest"
+	  "dateformat": "~1.0",
+	  "debug": "~2.2"
   },
   "keywords": [
     "XPL"
