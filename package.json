@@ -1,10 +1,11 @@
 {
   "name": "xpl-tools",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "XPL logger",
   "bin": {
   	"xpl-logger": "./bin/xpl-logger",
-    "xpl-hub": "./bin/xpl-hub"
+    "xpl-hub": "./bin/xpl-hub",
+    "xpl-hub": "./bin/xpl-cmnd"
   },
   "dependencies": {
 	  "xpl-api": "~1.4",
