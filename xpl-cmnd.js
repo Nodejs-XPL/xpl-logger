@@ -4,11 +4,11 @@ var os = require('os');
 
 commander.version(require("./package.json").version);
 
-commander.option("--command", "Command");
-commander.option("--device", "Device");
-commander.option("--current", "Current");
-commander.option("--bodyName", "Body name");
-commander.option("--target", "Target");
+commander.option("--command <command>", "Command");
+commander.option("--device <device>", "Device");
+commander.option("--current <current>", "Current");
+commander.option("--bodyName <name>", "Body name");
+commander.option("--target <target>", "Target");
 
 Xpl.fillCommander(commander);
 
